@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: transform 0.3s ease;
+}
+
+header {
+  width: 100%;
+  background: #ffcc00;
+  color: black;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 0 20px #ffcc00;
+}
+
+.scale-select {
+  margin: 15px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* container now matches the HTML class name */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* space between buttons */
+  margin-top: 20px;
+  width: 90%;
+  max-width: 420px;
+  padding: 10px 0;
+  align-items: center;
+}
+
+/* button styling to match the look in your image */
+.btn {
+  display: block;
+  width: 100%;
+  background: #ffcc00;
+  color: black;
+  padding: 18px 22px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  /* two-layer shadow: dark "base" shadow under the button + yellow glow */
+  box-shadow:
+    0 8px 0 rgba(0,0,0,0.65),     /* dark flat shadow to create the "separated" look */
+    0 0 20px rgba(255,204,0,0.45); /* soft yellow glow */
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* hover lifts the button slightly and increases glow */
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 0 rgba(0,0,0,0.6),
+    0 0 30px rgba(255,204,0,0.6);
+}
+
+/* active/pressed look */
+.btn:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 4px 0 rgba(0,0,0,0.7),
+    0 0 14px rgba(255,204,0,0.35);
+}
